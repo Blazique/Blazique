@@ -32,6 +32,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Pack
-      run: dotnet pack --no-build --configuration Release --output ./nupkg /p:PackageVersion=${{ steps.version.outputs.VERSION }}
+      run: dotnet pack --configuration Release --output ./nupkg /p:PackageVersion=${{ steps.version.outputs.VERSION }}
     - name: Publish
       run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
