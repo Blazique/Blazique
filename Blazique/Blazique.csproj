@@ -29,4 +29,8 @@
     <Folder Include="Web\Html\Names\" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CS8981</NoWarn>
+  </PropertyGroup>
+
 </Project>
