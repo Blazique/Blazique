@@ -164,6 +164,7 @@ public static class Attributes
     /// </summary>
     public static Data.Attribute _required(string[] values, [CallerLineNumber] int nodeId = 0) => Create<_required>(values, nodeId);
     public static Data.Attribute reversed(string[] values, [CallerLineNumber] int nodeId = 0) => Create<reversed>(values, nodeId);
+    public static Data.Attribute role(string[] values, [CallerLineNumber] int nodeId = 0) => Create<role>(values, nodeId);
 
     public static Data.Attribute rows(string[] values, [CallerLineNumber] int nodeId = 0) => Create<rows>(values, nodeId);
 

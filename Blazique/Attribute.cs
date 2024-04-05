@@ -7,6 +7,7 @@ namespace Blazique;
 /// </summary>
 public static class Attribute
 {
+    
     public static Data.Attribute Create<T>(string[] values, int nodeId = 0)
         where T : Literal<T>, AttributeName
         =>

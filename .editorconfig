@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# IDE0022: Use block body for method
+csharp_style_expression_bodied_methods = false
+
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none
+
+# IDE0022: Use block body for method
+dotnet_diagnostic.IDE0022.severity = none

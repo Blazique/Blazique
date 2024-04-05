@@ -292,6 +292,9 @@ public partial struct _required : AttributeName { }
 public partial struct reversed: AttributeName { }
 
 [Literal]
+public partial struct role : AttributeName { }
+
+[Literal]
 public partial struct rows: AttributeName { }
 
 [Literal]
