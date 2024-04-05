@@ -29,9 +29,12 @@ jobs:
     - name: Run Benchmarks
       run: dotnet run -c Release --project Blazique.BenchMarks/Blazique.BenchMarks.csproj --no-build -- --filter * > output.txt
     - name: Store benchmark result
-      uses: rhysd/github-action-benchmark@v1
+      uses: benchmark-action/github-action-benchmark@v1
       with:
         name: Benchmark
-        tool: 'BenchmarkDotNet'
+        tool: 'benchmarkdotnet'
         output-file-path: output.txt
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        benchmark-data-dir-path: 'benchmark-results'
+        # Push and deploy GitHub pages branch automatically
+        auto-push: true
