@@ -27,7 +27,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Run Benchmarks
-      run: dotnet run -c Release --project Blazique/Blazique.BenchMarks/Blazique.BenchMarks.csproj --no-build -- --filter * > output.txt
+      run: dotnet run -c Release --project /Blazique/Blazique/Blazique.BenchMarks/Blazique.BenchMarks.csproj --no-build -- --filter * > output.txt
     - name: Store benchmark result
       uses: benchmark-action/github-action-benchmark@v1
       with:
