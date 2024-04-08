@@ -25,9 +25,10 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --configuration --no-restore
     - name: Run Benchmarks
-      run: dotnet "Blazique.BenchMarks.dll" > output.txt
+    
+      run: dotnet "Blazique.BenchMarks/bin/Release/net8.0/Blazique.BenchMarks.dll" > output.txt
     - name: Store benchmark result
       uses: benchmark-action/github-action-benchmark@v1
       with:
