@@ -27,7 +27,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Run Benchmarks
-      run: dotnet run -c Release --project Blazique.Benchmarks/Blazique.Benchmarks.csproj --no-build -- --filter * --exporters json > benchmark-results.json
+      run: dotnet run -c Release --project Blazique.Benchmarks/Blazique.Benchmarks.csproj --no-build -- --filter * --exporters json
     - name: Show Benchmark Results
       run: cat benchmark-results.json
     - name: Check current path
@@ -37,7 +37,7 @@ jobs:
       with:
         name: Benchmark
         tool: 'benchmarkdotnet'
-        output-file-path: benchmark-results.json
+        output-file-path: BenchmarkDotNet.Artifacts/results/Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks-report-full.json
         github-token: ${{ secrets.GITHUB_TOKEN }}
         benchmark-data-dir-path: 'benchmark-results'
         # Push and deploy GitHub pages branch automatically
