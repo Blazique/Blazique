@@ -29,7 +29,7 @@ jobs:
     - name: Check current path
       run: pwd && ls -R
     - name: Run Benchmarks
-      run: dotnet "./Blazique.BenchMarks/bin/Release/net8.0/Blazique.BenchMarks.dll" > output.txt
+      run: dotnet "./Blazique.Benchmarks/bin/Release/net8.0/Blazique.Benchmarks.dll" > output.txt
     - name: Store benchmark result
       uses: benchmark-action/github-action-benchmark@v1
       with:
