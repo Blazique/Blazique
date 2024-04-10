@@ -13,8 +13,7 @@ class Program
     {
         IConfig config = DefaultConfig.Instance
             .AddDiagnoser(MemoryDiagnoser.Default)
-            .AddDiagnoser(EventPipeProfiler.Default)
-            .AddExporter(JsonExporter.Full);
+            .AddDiagnoser(EventPipeProfiler.Default);
 
         var summary = BenchmarkRunner.Run<Counter.BuildRenderTreeBenchmarks>(config);
     }

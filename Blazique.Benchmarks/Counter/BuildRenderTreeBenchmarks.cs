@@ -11,6 +11,7 @@ namespace Blazique.Benchmarks.Counter;
 
 
 [MinIterationTime(100)]
+[JsonExporterAttribute.Full]
 public class BuildRenderTreeBenchmarks
 {
 
