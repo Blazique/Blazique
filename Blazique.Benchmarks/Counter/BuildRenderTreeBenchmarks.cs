@@ -15,7 +15,7 @@ namespace Blazique.Benchmarks.Counter;
 public class BuildRenderTreeBenchmarks
 {
 
-    [Benchmark(Baseline = true)]
+    [Benchmark(Baseline = true, Description = "Standard Razor Counter Component")]
     public async Task BuildRenderTree()
     {
         IServiceCollection services = new ServiceCollection();
@@ -32,7 +32,7 @@ public class BuildRenderTreeBenchmarks
         });
     }
 
-    [Benchmark]
+    [Benchmark(Description = "Blazique Counter Component")]
     public async Task BuildRenderTreeWithBlazique()
     {
         IServiceCollection services = new ServiceCollection();
