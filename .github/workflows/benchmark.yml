@@ -26,12 +26,12 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Check current path
-      run: pwd && ls -R
     - name: Run Benchmarks
       run: dotnet run -c Release --project Blazique.Benchmarks/Blazique.Benchmarks.csproj --no-build -- --filter * --exporters json > benchmark-results.json
     - name: Show Benchmark Results
       run: cat benchmark-results.json
+    - name: Check current path
+      run: pwd && ls -R
     - name: Store benchmark result
       uses: benchmark-action/github-action-benchmark@v1
       with:
