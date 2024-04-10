@@ -26,8 +26,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Check current path
+      run: pwd && ls -R
     - name: Run Benchmarks
-    
       run: dotnet "Blazique.BenchMarks/bin/Release/net8.0/Blazique.BenchMarks.dll" > output.txt
     - name: Store benchmark result
       uses: benchmark-action/github-action-benchmark@v1
