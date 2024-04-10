@@ -29,13 +29,13 @@ jobs:
     - name: Check current path
       run: pwd && ls -R
     - name: Run Benchmarks
-      run: dotnet "./Blazique.Benchmarks/bin/Release/net8.0/Blazique.Benchmarks.dll" > output.txt
+      run: dotnet run -c Release --project Blazique.Benchmarks/Blazique.Benchmarks.csproj --no-build -- --filter * --exporters json > benchmark-results.json
     - name: Store benchmark result
       uses: benchmark-action/github-action-benchmark@v1
       with:
         name: Benchmark
         tool: 'benchmarkdotnet'
-        output-file-path: output.txt
+        output-file-path: benchmark-results.json
         github-token: ${{ secrets.GITHUB_TOKEN }}
         benchmark-data-dir-path: 'benchmark-results'
         # Push and deploy GitHub pages branch automatically
