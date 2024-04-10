@@ -30,6 +30,8 @@ jobs:
       run: pwd && ls -R
     - name: Run Benchmarks
       run: dotnet run -c Release --project Blazique.Benchmarks/Blazique.Benchmarks.csproj --no-build -- --filter * --exporters json > benchmark-results.json
+    - name: Show Benchmark Results
+      run: cat benchmark-results.json
     - name: Store benchmark result
       uses: benchmark-action/github-action-benchmark@v1
       with:
