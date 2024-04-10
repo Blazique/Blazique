@@ -14,9 +14,8 @@ class Program
         IConfig config = DefaultConfig.Instance
             .AddDiagnoser(MemoryDiagnoser.Default)
             .AddDiagnoser(EventPipeProfiler.Default)
-            .AddExporter(JsonExporter.Full)
-            .AddExporter(JsonExporter.FullCompressed);
+            .AddExporter(JsonExporter.Full);
 
-        var summary = BenchmarkRunner.Run<Benchmarks.Counter.BuildRenderTreeBenchmarks>(config);
+        var summary = BenchmarkRunner.Run<Counter.BuildRenderTreeBenchmarks>(config);
     }
 }
