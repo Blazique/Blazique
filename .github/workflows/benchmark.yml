@@ -36,7 +36,7 @@ jobs:
         name: Benchmark
         tool: 'benchmarkdotnet'
         output-file-path: BenchmarkDotNet.Artifacts/results/Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks-report-full.json
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.PUSH_BENCHMARK_RESULTS }}
         benchmark-data-dir-path: 'benchmark-results'
         # Push and deploy GitHub pages branch automatically
         auto-push: true
