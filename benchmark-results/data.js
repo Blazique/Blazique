@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1712738500271,
+  "lastUpdate": 1712850510500,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -68,6 +68,40 @@ window.BENCHMARK_DATA = {
             "value": 23828.547585227272,
             "unit": "ns",
             "range": "± 1010.5232570673602"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "distinct": true,
+          "id": "9036b575507a97ca0994beaea346654702c8323e",
+          "message": "Update Blazique.Benchmarks/Counter/Counter.razor and README.md files",
+          "timestamp": "2024-04-11T17:47:28+02:00",
+          "tree_id": "e3d619e80a688ff2a99ce9392a001166d4174adc",
+          "url": "https://github.com/Blazique/Blazique/commit/9036b575507a97ca0994beaea346654702c8323e"
+        },
+        "date": 1712850509956,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23112.133329503675,
+            "unit": "ns",
+            "range": "± 600.2177962358998"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 24522.357795266544,
+            "unit": "ns",
+            "range": "± 1088.1779236971936"
           }
         ]
       }
