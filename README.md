@@ -262,3 +262,5 @@ To install Blazique, run the following command in your terminal:
 ```bash
 dotnet add package Blazique
 ```
+## Benchmark Results
+[View Benchmark Results](https://blazique.github.io/Blazique/benchmark-results/)
