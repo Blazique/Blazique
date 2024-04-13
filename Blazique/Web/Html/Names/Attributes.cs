@@ -8,6 +8,9 @@ namespace Blazique.Web.Html.Names.Attributes;
 // https://html.spec.whatwg.org/multipage/indices.html#index
 
 [Literal]
+public partial struct html : AttributeName { }
+
+[Literal]
 public partial struct abbr : AttributeName { }
 
 [Literal]
