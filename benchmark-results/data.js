@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1713163125905,
+  "lastUpdate": 1713163697903,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -238,6 +238,40 @@ window.BENCHMARK_DATA = {
             "value": 24972.073767089845,
             "unit": "ns",
             "range": "± 1807.7131470420832"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "distinct": true,
+          "id": "d73b7e610d932b1ca444fcee1df1e693208c23f9",
+          "message": "Refactor Blazique.Attribute class and add new attribute types",
+          "timestamp": "2024-04-15T08:47:21+02:00",
+          "tree_id": "987c4263dcc0b98fc255728d64511a92e24b9d39",
+          "url": "https://github.com/Blazique/Blazique/commit/d73b7e610d932b1ca444fcee1df1e693208c23f9"
+        },
+        "date": 1713163697039,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23949.87959698933,
+            "unit": "ns",
+            "range": "± 3184.728427148761"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 24954.21165446994,
+            "unit": "ns",
+            "range": "± 2358.788391752803"
           }
         ]
       }
