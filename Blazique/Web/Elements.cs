@@ -129,7 +129,7 @@ public static class Elements
     public static Node dl(Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<dl>(children, key, nodeId);
     //public static Node dl(Data.Attribute[] attributes, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<dl>(attributes, key, nodeId); 
 
-    public static Node doctype(Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<doctype>(children, key, nodeId);
+    public static Node doctype(Data.Attribute[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<doctype>(children, [], key, nodeId);
 
     public static Node dt(Data.Attribute[] attributes, Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<dt>(attributes, children, key, nodeId);
     public static Node dt(Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<dt>(children, key, nodeId);
