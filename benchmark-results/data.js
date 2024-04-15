@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1713163697903,
+  "lastUpdate": 1713164009706,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -272,6 +272,40 @@ window.BENCHMARK_DATA = {
             "value": 24954.21165446994,
             "unit": "ns",
             "range": "± 2358.788391752803"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "distinct": true,
+          "id": "6045990f802d4f48bbc34225c73d4e9fc3f3bd85",
+          "message": "chore: Add doctype element to Elements.cs",
+          "timestamp": "2024-04-15T08:52:34+02:00",
+          "tree_id": "13c09fa05d8f5c713356a815134a8562908c29dc",
+          "url": "https://github.com/Blazique/Blazique/commit/6045990f802d4f48bbc34225c73d4e9fc3f3bd85"
+        },
+        "date": 1713164009442,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23466.593379579743,
+            "unit": "ns",
+            "range": "± 928.5411504107874"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 25134.609232584637,
+            "unit": "ns",
+            "range": "± 812.440086822335"
           }
         ]
       }
