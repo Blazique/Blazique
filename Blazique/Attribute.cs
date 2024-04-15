@@ -43,7 +43,7 @@ public static class Attribute
     /// <param name="node"></param>
     /// <param name="nodeId"></param>
     /// <returns></returns>
-    public static Blazique.Data.Attribute fragment(string name, Node[] node, [CallerLineNumber] int nodeId = 0) => 
+    public static Data.Attribute fragment(string name, Node[] node, [CallerLineNumber] int nodeId = 0) => 
     (component, builder) =>
         builder.AddAttribute(nodeId, name, new RenderFragment(rt => {
             foreach (var n in node)
@@ -59,7 +59,7 @@ public static class Attribute
     /// <param name="f"></param>
     /// <param name="nodeId"></param>
     /// <returns></returns>
-    public static Blazique.Data.Attribute fragment<T>(string name, Func<T, Node[]> f, [CallerLineNumber] int nodeId = 0) => 
+    public static Data.Attribute fragment<T>(string name, Func<T, Node[]> f, [CallerLineNumber] int nodeId = 0) => 
     (component, builder) =>
         builder.AddAttribute(nodeId, name, new RenderFragment<T>(context => 
             new RenderFragment(rt => 
