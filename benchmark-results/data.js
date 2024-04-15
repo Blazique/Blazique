@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1713164009706,
+  "lastUpdate": 1713164766083,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -306,6 +306,40 @@ window.BENCHMARK_DATA = {
             "value": 25134.609232584637,
             "unit": "ns",
             "range": "± 812.440086822335"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "distinct": true,
+          "id": "813c41cc89a94bb1df5b3243b906fefddf3a8c12",
+          "message": "refactor: Update doctype element in Elements.cs to accept Data.Attribute[] as children",
+          "timestamp": "2024-04-15T09:05:04+02:00",
+          "tree_id": "4676e2c1f583927f48b67d1e02a5b7fc5ea4f2d7",
+          "url": "https://github.com/Blazique/Blazique/commit/813c41cc89a94bb1df5b3243b906fefddf3a8c12"
+        },
+        "date": 1713164765804,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23126.80752268145,
+            "unit": "ns",
+            "range": "± 399.6629614647149"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 24924.346375868055,
+            "unit": "ns",
+            "range": "± 659.2543442800226"
           }
         ]
       }
