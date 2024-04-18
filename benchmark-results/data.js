@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1713187399207,
+  "lastUpdate": 1713449532819,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -408,6 +408,40 @@ window.BENCHMARK_DATA = {
             "value": 25331.384411621093,
             "unit": "ns",
             "range": "± 1211.669065641073"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "distinct": true,
+          "id": "3043f3d5467983eef3614505ba36da2b1c9b6d2b",
+          "message": "refactor: Add RenderModeAttribute subclasses for different render modes",
+          "timestamp": "2024-04-18T16:07:02+02:00",
+          "tree_id": "4dc44f5e7883caf7eeb14f48b5a1e4c3dd802a12",
+          "url": "https://github.com/Blazique/Blazique/commit/3043f3d5467983eef3614505ba36da2b1c9b6d2b"
+        },
+        "date": 1713449532515,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23374.463138409516,
+            "unit": "ns",
+            "range": "± 1104.87204720035"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 24727.46264982877,
+            "unit": "ns",
+            "range": "± 1148.8709249480426"
           }
         ]
       }
