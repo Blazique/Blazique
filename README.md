@@ -30,6 +30,15 @@ Blazique aims to provide a library that:
 
 - **Integration with Blazor**: Designed to work seamlessly with Blazor's features, Blazique components can be composed with Razor-based components and vice versa.
 
+- **Code only page components**: Use the appropriate attributes to make a page routeable and set the rendermode using attributes (which was depricated from .NET 8 on): 
+    ```csharp
+    [Route("/")]
+    [InteractiveServerRenderMode]
+    public class Index : Component
+    {
+    }
+    ```
+
 ## Possible Advantages and Disadvantages
 
 - **Pros**:
