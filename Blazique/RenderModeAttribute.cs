@@ -8,7 +8,7 @@ public class InteractiveServerRenderModeAttribute : RenderModeAttribute
     public override IComponentRenderMode Mode  => RenderMode.InteractiveServer;
 }
 
-public class InteractiveWebAssemblyServerRenderModeAttribute : RenderModeAttribute
+public class InteractiveWebAssemblyRenderModeAttribute : RenderModeAttribute
 {
     public override IComponentRenderMode Mode  => RenderMode.InteractiveWebAssembly;
 }

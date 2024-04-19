@@ -35,9 +35,9 @@ public abstract class Component : ComponentBase
 /// </summary>
 /// <typeparam name="TModel"></typeparam>
 public abstract class Component<TModel> : Component
-    where TModel : notnull
+    where TModel : notnull, new()
 {
-    [Parameter] public TModel Model { get; set; } = default!;
+    [Parameter] public TModel Model { get; set; } = new();
 }
 
 /// <summary>
@@ -46,7 +46,7 @@ public abstract class Component<TModel> : Component
 /// <typeparam name="TModel">The type of the model</typeparam>
 /// <typeparam name="TCommand">The base type of the commands the component can handle</typeparam>
 public abstract class Component<TModel, TCommand> : Component<TModel>
-    where TModel : notnull
+    where TModel : notnull, new()
 {
     /// <summary>
     /// Contains the logic for rendering the view and possible (user) interaction
