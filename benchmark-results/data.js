@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1713449532819,
+  "lastUpdate": 1713513031266,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -442,6 +442,40 @@ window.BENCHMARK_DATA = {
             "value": 24727.46264982877,
             "unit": "ns",
             "range": "± 1148.8709249480426"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "distinct": true,
+          "id": "1059ac3adc8f53461e28239fbaf71f04d1707351",
+          "message": "`refactor: Update Blazique.Component class enforce empty constructor on Model`",
+          "timestamp": "2024-04-19T09:49:30+02:00",
+          "tree_id": "3d7ff8b012389eff19332970d1e60a4d4fb7c2ec",
+          "url": "https://github.com/Blazique/Blazique/commit/1059ac3adc8f53461e28239fbaf71f04d1707351"
+        },
+        "date": 1713513030583,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23406.292331271703,
+            "unit": "ns",
+            "range": "± 926.8033815600832"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 25926.867020769816,
+            "unit": "ns",
+            "range": "± 5414.779438950047"
           }
         ]
       }
