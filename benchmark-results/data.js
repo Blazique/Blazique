@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1713513031266,
+  "lastUpdate": 1713799380841,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -476,6 +476,40 @@ window.BENCHMARK_DATA = {
             "value": 25926.867020769816,
             "unit": "ns",
             "range": "± 5414.779438950047"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters"
+          },
+          "distinct": true,
+          "id": "88fb2e94c7cc3666a628d8c588c96ac1ce606701",
+          "message": "`refactor: Update RenderModeAttribute subclasses to include Prerender property`",
+          "timestamp": "2024-04-22T15:01:08+02:00",
+          "tree_id": "7d725240b4df7f9077a7f3e2f10f0848b98be736",
+          "url": "https://github.com/Blazique/Blazique/commit/88fb2e94c7cc3666a628d8c588c96ac1ce606701"
+        },
+        "date": 1713799380531,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23699.71856617647,
+            "unit": "ns",
+            "range": "± 2079.0401679837964"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 24594.90850830078,
+            "unit": "ns",
+            "range": "± 2437.0095040476454"
           }
         ]
       }
