@@ -5,15 +5,18 @@ namespace Blazique;
 
 public class InteractiveServerRenderModeAttribute : RenderModeAttribute
 {
-    public override IComponentRenderMode Mode  => RenderMode.InteractiveServer;
+    public bool Prerender { get; set; }
+    public override IComponentRenderMode Mode  => new InteractiveServerRenderMode(Prerender);
 }
 
 public class InteractiveWebAssemblyRenderModeAttribute : RenderModeAttribute
 {
-    public override IComponentRenderMode Mode  => RenderMode.InteractiveWebAssembly;
+    public bool Prerender { get; set; }
+    public override IComponentRenderMode Mode  => new InteractiveWebAssemblyRenderMode(Prerender);
 }
 
 public class InteractiveAutoRenderModeAttribute : RenderModeAttribute
 {
-    public override IComponentRenderMode Mode  => RenderMode.InteractiveAuto;
+    public bool Prerender { get; set; }
+    public override IComponentRenderMode Mode  => new InteractiveAutoRenderMode(Prerender);
 }
