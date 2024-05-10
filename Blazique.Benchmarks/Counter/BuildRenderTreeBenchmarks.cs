@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 namespace Blazique.Benchmarks.Counter;
 
 
+[MemoryDiagnoser]
 [MinIterationTime(100)]
 [JsonExporterAttribute.Full]
 public class BuildRenderTreeBenchmarks

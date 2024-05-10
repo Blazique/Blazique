@@ -37,7 +37,16 @@ public abstract class Component : ComponentBase
 public abstract class Component<TModel> : Component
     where TModel : notnull, new()
 {
-    [Parameter] public TModel Model { get; set; } = new();
+    protected TModel Model { get; set; } = new();
+
+    protected sealed override async Task OnInitializedAsync()
+    {
+        await Initialize(Model);
+        await base.OnInitializedAsync();
+    }
+
+    protected virtual Task<TModel> Initialize(TModel model) => 
+        Task.FromResult(Model);
 }
 
 /// <summary>
