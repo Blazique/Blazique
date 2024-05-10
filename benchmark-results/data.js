@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1715328556045,
+  "lastUpdate": 1715329154689,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -546,6 +546,42 @@ window.BENCHMARK_DATA = {
             "value": 25646.1369176794,
             "unit": "ns",
             "range": "± 694.174608599199"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "distinct": true,
+          "id": "9299edbb04b83642b8b8c8821256e78b3c41cbd6",
+          "message": "Clarify unstable API suurface untill release of 1.x",
+          "timestamp": "2024-05-10T10:18:11+02:00",
+          "tree_id": "d0475f5bd69b666b7217a82965bdbd0ec36e7289",
+          "url": "https://github.com/Blazique/Blazique/commit/9299edbb04b83642b8b8c8821256e78b3c41cbd6"
+        },
+        "date": 1715329154056,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23269.042626096492,
+            "unit": "ns",
+            "range": "± 834.7368492784304"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 24749.812622070312,
+            "unit": "ns",
+            "range": "± 474.04995376479"
           }
         ]
       }
