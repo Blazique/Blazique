@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1713799380841,
+  "lastUpdate": 1715328556045,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -510,6 +510,42 @@ window.BENCHMARK_DATA = {
             "value": 24594.90850830078,
             "unit": "ns",
             "range": "± 2437.0095040476454"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "distinct": true,
+          "id": "4f277c9021006720737acafc2550764e8bb4112e",
+          "message": "Added explicit initialization of the model as the only model initialization method",
+          "timestamp": "2024-05-10T10:08:18+02:00",
+          "tree_id": "cffb9a03c89613497c17ef5315093b2567d229a8",
+          "url": "https://github.com/Blazique/Blazique/commit/4f277c9021006720737acafc2550764e8bb4112e"
+        },
+        "date": 1715328555376,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23008.376429115855,
+            "unit": "ns",
+            "range": "± 751.6865670365636"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 25646.1369176794,
+            "unit": "ns",
+            "range": "± 694.174608599199"
           }
         ]
       }
