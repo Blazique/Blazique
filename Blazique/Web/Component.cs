@@ -41,7 +41,7 @@ public abstract class Component<TModel> : Component
 
     protected sealed override async Task OnInitializedAsync()
     {
-        await Initialize(Model);
+        Model = await Initialize(Model);
         await base.OnInitializedAsync();
     }
 
