@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1715329154689,
+  "lastUpdate": 1715330432577,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -582,6 +582,42 @@ window.BENCHMARK_DATA = {
             "value": 24749.812622070312,
             "unit": "ns",
             "range": "± 474.04995376479"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "distinct": true,
+          "id": "43d9a0f955c569b7f87cb284382589dc08e63efa",
+          "message": "`fix: Initialize model in OnInitializedAsync method`",
+          "timestamp": "2024-05-10T10:39:25+02:00",
+          "tree_id": "f8ef418e89eb60b2b092e7ab0f2063c11fb77930",
+          "url": "https://github.com/Blazique/Blazique/commit/43d9a0f955c569b7f87cb284382589dc08e63efa"
+        },
+        "date": 1715330432286,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23768.904826336595,
+            "unit": "ns",
+            "range": "± 2651.6905557895548"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 24722.35546875,
+            "unit": "ns",
+            "range": "± 673.1331713571127"
           }
         ]
       }
