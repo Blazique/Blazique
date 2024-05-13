@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1715330432577,
+  "lastUpdate": 1715593083902,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -618,6 +618,42 @@ window.BENCHMARK_DATA = {
             "value": 24722.35546875,
             "unit": "ns",
             "range": "± 673.1331713571127"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "distinct": true,
+          "id": "2bc3c6949ac2f8a9a1dc967b2a98390ead5ee3af",
+          "message": "`refactor: Update Counter component button markup`\n\nthis ensures equal html output for benchmark comparisons",
+          "timestamp": "2024-05-13T11:37:00+02:00",
+          "tree_id": "acad44c023095bd43467ed83c959fed851747802",
+          "url": "https://github.com/Blazique/Blazique/commit/2bc3c6949ac2f8a9a1dc967b2a98390ead5ee3af"
+        },
+        "date": 1715593083461,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 24676.208454913405,
+            "unit": "ns",
+            "range": "± 5365.979804821404"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 25355.679890422078,
+            "unit": "ns",
+            "range": "± 1294.5587660757412"
           }
         ]
       }
