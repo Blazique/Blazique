@@ -15,6 +15,6 @@ public static class Components
     public static Node navLinkMatchPrefix(Data.Attribute[] attributes, Node[] children, [CallerLineNumber] int nodeId = 0) => navLink(NavLinkMatch.Prefix, attributes, children, nodeId);
 
     public static Node navLink(NavLinkMatch navLinkMatch, Data.Attribute[] attributes, Node[] children, [CallerLineNumber] int nodeId = 0) =>
-        Component.Create<NavLink>(attributes.Prepend(Attribute.Create("Match", [navLinkMatch])).ToArray(), children, nodeId);
+        Component.Create<NavLink>(attributes.Prepend(Attribute.Create("Match", [navLinkMatch.ToString()])).ToArray(), children, nodeId);
 
 }

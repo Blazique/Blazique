@@ -11,11 +11,15 @@ public class BlaziqueCounter : Web.Component
         currentCount++;
     }
 
+    private static readonly Node[] TitleAndHeader = [
+        component<PageTitle>([], [text("Counter")]),
+        h1([], [text("Counter")])
+    ];
+
     public override Node[] Render() =>
      [
-        component<PageTitle>([], [text("Counter")]),
-        h1([], [text("Counter")]),
-        p([role(["status"])], [text("Current count: "), text(currentCount)]),
+        .. TitleAndHeader,
+        p([role(["status"])], [text($"Current count: {currentCount}")]),
         button([type(["button"]), @class(["btn", "btn-primary"]), on.click(_ => IncrementCount())], [text("Click me")])
     ];
 }

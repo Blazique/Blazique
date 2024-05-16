@@ -22,9 +22,10 @@ public abstract class Component : ComponentBase
     {
         base.BuildRenderTree(builder);
         var nodes = Render();
-        
-        foreach (Node node in nodes)
+
+        for (int i = 0; i < nodes.Length; i++)
         {
+            Node node = nodes[i];
             node(this, builder);
         }
     }

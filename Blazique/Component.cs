@@ -11,7 +11,6 @@ public static class Component
         [CallerLineNumber] int nodeId = 0) where T : IComponent
         => (component, builder) =>
             {
-                builder.OpenRegion(nodeId);
                 builder.OpenComponent<T>(nodeId);
                 builder.SetKey(key);
 
@@ -35,6 +34,5 @@ public static class Component
                 }
 
                 builder.CloseComponent();
-                builder.CloseRegion();
             };
 }

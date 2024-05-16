@@ -14,7 +14,7 @@ public partial struct html : AttributeName { }
 public partial struct abbr : AttributeName { }
 
 [Literal]
-public partial record accept : AttributeName { }
+public partial struct accept : AttributeName { }
 
 [Literal(StringRepresentation = "accept-charset")]
 public partial struct acceptCharset : AttributeName { }

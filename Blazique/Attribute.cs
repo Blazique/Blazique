@@ -11,28 +11,26 @@ namespace Blazique;
 public static class Attribute
 {
     
-    public static Data.Attribute Create<T>(object[] values, int nodeId = 0)
-        where T : Literal<T>, AttributeName
+    public static Data.Attribute Create<T>(string[] values, int nodeId = 0)
+    where T : Literal<T>, AttributeName
+    =>
+    (_, builder)
         =>
-        (_, builder)
-            =>
         {
-            if (values.Length > 0)
-                builder.AddAttribute(nodeId, T.Format(), values.Aggregate((current, next) => $"{current} {next}"));
-
+            var combinedValues = values != null ? string.Join(" ", values) : string.Empty;
+            builder.AddAttribute(nodeId, T.Format(), combinedValues);
         };
 
-    public static Data.Attribute Create(string name, object[] values, int nodeId = 0)
+public static Data.Attribute Create(string name, string[] values, int nodeId = 0)
+    =>
+    (_, builder)
         =>
-            (_, builder)
-                =>
-            {
-                if (values.Length > 0)
-                    builder.AddAttribute(nodeId, name, values.Aggregate((current, next) => $"{current} {next}"));
+        {
+            var combinedValues = values != null ? string.Join(" ", values) : string.Empty;
+            builder.AddAttribute(nodeId, name, combinedValues);
+        };
 
-            };
-
-    public static Data.Attribute attribute(string name, object[] values, [CallerLineNumber] int nodeId = 0) =>
+    public static Data.Attribute attribute(string name, string[] values, [CallerLineNumber] int nodeId = 0) =>
         Create(name, values, nodeId);
 
     /// <summary>

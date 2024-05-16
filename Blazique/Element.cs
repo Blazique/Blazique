@@ -15,14 +15,14 @@ public static class Element
             builder.OpenElement(nodeId, T.Format());
             builder.SetKey(key);
 
-            foreach (Data.Attribute attribute in attributes)
+            for (int i = 0; i < attributes.Length; i++)
             {
-                attribute(component, builder);
+                attributes[i](component, builder);
             }
 
-            foreach (Data.Node child in children)
+            for (int i = 0; i < children.Length; i++)
             {
-                child(component, builder);
+                children[i](component, builder);
             }
 
             builder.CloseElement();
@@ -30,5 +30,5 @@ public static class Element
 
     public static Data.Node Create<T>(Data.Node[] children, object? key = null, int nodeId = 0)
         where T : Literal<T>, ElementName =>
-            Create<T>([], children, key, nodeId);
+            Create<T>(Array.Empty<Data.Attribute>(), children, key, nodeId);
 }
