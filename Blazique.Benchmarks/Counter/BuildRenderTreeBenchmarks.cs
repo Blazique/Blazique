@@ -11,42 +11,34 @@ namespace Blazique.Benchmarks.Counter;
 
 
 [MemoryDiagnoser]
-[MinIterationTime(100)]
+[MinIterationTime(250)]
 [JsonExporterAttribute.Full]
+[MinIterationCount(15)]
+[MaxIterationCount(20)]
 public class BuildRenderTreeBenchmarks
 {
 
-    [Benchmark(Baseline = true, Description = "Standard Razor Counter Component")]
-    public async Task BuildRenderTree()
+    private RenderTreeBuilder builder;
+    private Blazique.Benchmarks.Counter.Counter counter;
+    private BlaziqueCounter blaziqueCounter;
+
+    [GlobalSetup]
+    public void GlobalSetup()
     {
-        IServiceCollection services = new ServiceCollection();
-        services.AddLogging();
+        builder = new RenderTreeBuilder();
+        counter = new Blazique.Benchmarks.Counter.Counter();
+        blaziqueCounter = new BlaziqueCounter();
+    }
 
-        IServiceProvider serviceProvider = services.BuildServiceProvider();
-        ILoggerFactory loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
-
-        await using var htmlRenderer = new HtmlRenderer(serviceProvider, loggerFactory);
-
-        await htmlRenderer.Dispatcher.InvokeAsync(async () =>
-        {
-            var output = await htmlRenderer.RenderComponentAsync<Counter>();
-        });
+    [Benchmark(Baseline = true, Description = "Standard Razor Counter Component")]
+    public void BuildRenderTree()
+    {
+        counter.BuildRenderTreeExternal(builder);
     }
 
     [Benchmark(Description = "Blazique Counter Component")]
-    public async Task BuildRenderTreeWithBlazique()
+    public void BuildRenderTreeWithBlazique()
     {
-        IServiceCollection services = new ServiceCollection();
-        services.AddLogging();
-
-        IServiceProvider serviceProvider = services.BuildServiceProvider();
-        ILoggerFactory loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
-
-        await using var htmlRenderer = new HtmlRenderer(serviceProvider, loggerFactory);
-
-        await htmlRenderer.Dispatcher.InvokeAsync(async () =>
-        {
-             var output = await htmlRenderer.RenderComponentAsync<BlaziqueCounter>();
-        });
+        blaziqueCounter.BuildRenderTreeExternal(builder);
     }
 }

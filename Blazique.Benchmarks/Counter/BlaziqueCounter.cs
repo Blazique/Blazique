@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.Rendering;
 
 namespace Blazique.Benchmarks.Counter;
 
@@ -22,4 +23,8 @@ public class BlaziqueCounter : Web.Component
         p([role(["status"])], [text($"Current count: {currentCount}")]),
         button([type(["button"]), @class(["btn", "btn-primary"]), on.click(_ => IncrementCount())], [text("Click me")])
     ];
+
+
+
+    public void BuildRenderTreeExternal(RenderTreeBuilder builder) => BuildRenderTree(builder);
 }
