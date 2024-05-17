@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1715593083902,
+  "lastUpdate": 1715930064795,
   "repoUrl": "https://github.com/Blazique/Blazique",
   "entries": {
     "Benchmark": [
@@ -654,6 +654,42 @@ window.BENCHMARK_DATA = {
             "value": 25355.679890422078,
             "unit": "ns",
             "range": "± 1294.5587660757412"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "committer": {
+            "email": "me@mauricepeters.dev",
+            "name": "Maurice CGP Peters",
+            "username": "MCGPPeters"
+          },
+          "distinct": true,
+          "id": "747cd76d9b8e7ac5f56d77d711fd05e192f23844",
+          "message": "`refactor: Update Event class to use AttributeCreator for event attribute creation to prevent closures`",
+          "timestamp": "2024-05-17T09:10:00+02:00",
+          "tree_id": "7b6880643e6f0adea45d5a1d84bd83cedfd5739a",
+          "url": "https://github.com/Blazique/Blazique/commit/747cd76d9b8e7ac5f56d77d711fd05e192f23844"
+        },
+        "date": 1715930064100,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTree",
+            "value": 23857.789697853917,
+            "unit": "ns",
+            "range": "± 2362.4249890573965"
+          },
+          {
+            "name": "Blazique.Benchmarks.Counter.BuildRenderTreeBenchmarks.BuildRenderTreeWithBlazique",
+            "value": 26150.04773530506,
+            "unit": "ns",
+            "range": "± 4290.017457221267"
           }
         ]
       }
