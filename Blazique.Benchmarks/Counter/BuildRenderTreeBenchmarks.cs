@@ -18,27 +18,19 @@ namespace Blazique.Benchmarks.Counter;
 public class BuildRenderTreeBenchmarks
 {
 
-    private RenderTreeBuilder builder;
-    private Blazique.Benchmarks.Counter.Counter counter;
-    private BlaziqueCounter blaziqueCounter;
-
-    [GlobalSetup]
-    public void GlobalSetup()
-    {
-        builder = new RenderTreeBuilder();
-        counter = new Blazique.Benchmarks.Counter.Counter();
-        blaziqueCounter = new BlaziqueCounter();
-    }
-
     [Benchmark(Baseline = true, Description = "Standard Razor Counter Component")]
-    public void BuildRenderTree()
+    public async Task BuildRenderTree()
     {
+        var counter = new Counter();
+        var builder = new RenderTreeBuilder();
         counter.BuildRenderTreeExternal(builder);
     }
 
     [Benchmark(Description = "Blazique Counter Component")]
-    public void BuildRenderTreeWithBlazique()
+    public async Task BuildRenderTreeWithBlazique()
     {
+        var blaziqueCounter = new BlaziqueCounter();
+        var builder = new RenderTreeBuilder();
         blaziqueCounter.BuildRenderTreeExternal(builder);
     }
 }
