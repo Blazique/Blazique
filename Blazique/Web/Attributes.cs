@@ -102,6 +102,9 @@ public static class Attributes
 
     public static Data.Attribute hreflang(string[] values, [CallerLineNumber] int nodeId = 0) => Create<hreflang>(values, nodeId);
 
+    public static Data.Attribute html(string[] values, [CallerLineNumber] int nodeId = 0) =>
+        Create<html>(values, nodeId);
+
     public static Data.Attribute httpequiv(string[] values, [CallerLineNumber] int nodeId = 0) => Create<httpEquiv>(values, nodeId);
 
 

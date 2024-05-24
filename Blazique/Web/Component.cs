@@ -22,9 +22,10 @@ public abstract class Component : ComponentBase
     {
         base.BuildRenderTree(builder);
         var nodes = Render();
-        
-        foreach (Node node in nodes)
+
+        for (int i = 0; i < nodes.Length; i++)
         {
+            Node node = nodes[i];
             node(this, builder);
         }
     }
@@ -35,9 +36,18 @@ public abstract class Component : ComponentBase
 /// </summary>
 /// <typeparam name="TModel"></typeparam>
 public abstract class Component<TModel> : Component
-    where TModel : notnull
+    where TModel : notnull, new()
 {
-    [Parameter] public TModel Model { get; set; } = default!;
+    protected TModel Model { get; set; } = new();
+
+    protected sealed override async Task OnInitializedAsync()
+    {
+        Model = await Initialize(Model);
+        await base.OnInitializedAsync();
+    }
+
+    protected virtual Task<TModel> Initialize(TModel model) => 
+        Task.FromResult(Model);
 }
 
 /// <summary>
@@ -46,7 +56,7 @@ public abstract class Component<TModel> : Component
 /// <typeparam name="TModel">The type of the model</typeparam>
 /// <typeparam name="TCommand">The base type of the commands the component can handle</typeparam>
 public abstract class Component<TModel, TCommand> : Component<TModel>
-    where TModel : notnull
+    where TModel : notnull, new()
 {
     /// <summary>
     /// Contains the logic for rendering the view and possible (user) interaction

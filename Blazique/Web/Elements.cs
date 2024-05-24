@@ -12,9 +12,9 @@ public static class Elements
 {
 
     public static Node a(Data.Attribute[] attributes, Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) =>
-        Blazique.Element.Create<a>(attributes, children, key, nodeId);
+        Create<a>(attributes, children, key, nodeId);
     public static Node a(Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) =>
-        Blazique.Element.Create<a>(children, key, nodeId);
+        Create<a>(children, key, nodeId);
 
     public static Node abbr(Data.Attribute[] attributes, Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<abbr>(attributes, children, key, nodeId);
     //public static Node abbr(Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<abbr>(children, key, nodeId);
@@ -128,6 +128,8 @@ public static class Elements
     public static Node dl(Data.Attribute[] attributes, Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<dl>(attributes, children, key, nodeId);
     public static Node dl(Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<dl>(children, key, nodeId);
     //public static Node dl(Data.Attribute[] attributes, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<dl>(attributes, key, nodeId); 
+
+    public static Node doctype(Data.Attribute[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<doctype>(children, [], key, nodeId);
 
     public static Node dt(Data.Attribute[] attributes, Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<dt>(attributes, children, key, nodeId);
     public static Node dt(Node[] children, object? key = null, [CallerLineNumber] int nodeId = 0) => Create<dt>(children, key, nodeId);

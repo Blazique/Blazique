@@ -7,11 +7,10 @@ namespace Blazique;
 public static class Component
 {
 
-    public static Data.Node Create<T>(Data.Attribute[] attributes, Data.Node[] children, object? key = null,
+    public static Node Create<T>(Data.Attribute[] attributes, Node[] children, object? key = null,
         [CallerLineNumber] int nodeId = 0) where T : IComponent
         => (component, builder) =>
             {
-                builder.OpenRegion(nodeId);
                 builder.OpenComponent<T>(nodeId);
                 builder.SetKey(key);
 
@@ -35,6 +34,5 @@ public static class Component
                 }
 
                 builder.CloseComponent();
-                builder.CloseRegion();
             };
 }

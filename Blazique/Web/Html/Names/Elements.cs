@@ -3,6 +3,7 @@ using Radix;
 
 namespace Blazique.Web.Html.Names.Elements;
 
+
 [Literal]
 public partial struct a : ElementName { }
 
@@ -90,6 +91,9 @@ public partial struct div : ElementName { }
 
 [Literal]
 public partial struct dl : ElementName { }
+
+[Literal(StringRepresentation = "!DOCTYPE")]
+public partial struct doctype : ElementName { }
 
 [Literal]
 public partial struct dt : ElementName { }

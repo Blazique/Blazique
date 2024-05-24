@@ -10,42 +10,27 @@ using Microsoft.Extensions.Logging;
 namespace Blazique.Benchmarks.Counter;
 
 
-[MinIterationTime(100)]
+[MemoryDiagnoser]
+[MinIterationTime(250)]
 [JsonExporterAttribute.Full]
+[MinIterationCount(15)]
+[MaxIterationCount(20)]
 public class BuildRenderTreeBenchmarks
 {
 
     [Benchmark(Baseline = true, Description = "Standard Razor Counter Component")]
     public async Task BuildRenderTree()
     {
-        IServiceCollection services = new ServiceCollection();
-        services.AddLogging();
-
-        IServiceProvider serviceProvider = services.BuildServiceProvider();
-        ILoggerFactory loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
-
-        await using var htmlRenderer = new HtmlRenderer(serviceProvider, loggerFactory);
-
-        await htmlRenderer.Dispatcher.InvokeAsync(async () =>
-        {
-            var output = await htmlRenderer.RenderComponentAsync<Counter>();
-        });
+        var counter = new Counter();
+        var builder = new RenderTreeBuilder();
+        counter.BuildRenderTreeExternal(builder);
     }
 
     [Benchmark(Description = "Blazique Counter Component")]
     public async Task BuildRenderTreeWithBlazique()
     {
-        IServiceCollection services = new ServiceCollection();
-        services.AddLogging();
-
-        IServiceProvider serviceProvider = services.BuildServiceProvider();
-        ILoggerFactory loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
-
-        await using var htmlRenderer = new HtmlRenderer(serviceProvider, loggerFactory);
-
-        await htmlRenderer.Dispatcher.InvokeAsync(async () =>
-        {
-             var output = await htmlRenderer.RenderComponentAsync<BlaziqueCounter>();
-        });
+        var blaziqueCounter = new BlaziqueCounter();
+        var builder = new RenderTreeBuilder();
+        blaziqueCounter.BuildRenderTreeExternal(builder);
     }
 }
